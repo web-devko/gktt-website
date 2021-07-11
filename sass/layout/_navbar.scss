@@ -1,0 +1,159 @@
+.navbar-box {
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    z-index: 2;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+
+    nav {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background: #fff;
+        padding: 0 60px;
+        box-shadow: 0 3px 6px #00000029;
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            li {
+                list-style: none;
+                white-space: nowrap;
+                margin: 0 2.1vw;
+                a {
+                    text-decoration: none;
+                    transition: color .2s ease-in-out;
+                    color: $grey;
+                    font-size: max(15px, 0.94vw);
+                    font-weight: 700;
+                    text-decoration: none;
+                    width: 100px;
+            
+                    span {
+                        color: $blue-light;
+                    }
+                }
+            }
+        }
+    
+    }
+}
+
+.sticky {
+    position: fixed;
+    margin-top: 0;
+    height: 95px;
+    transition: height 100ms;
+}
+
+
+#home:hover {
+    color: $blue-light;
+}
+#aboutus:hover {
+    color: $blue-max-light;
+}
+
+#green:hover {
+    color: $yellow;
+}
+#office:hover {
+    color: $mint;
+}
+
+
+
+.hamburger {
+    display: none;
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: $dirty-cream;
+        border-radius: 30px;
+    }
+}
+
+
+
+
+@include breakpoint(desktop) {
+    nav {
+        max-width: 100vw;
+        padding: 0 10px;
+        .logo {
+            height: 42px;   
+        }
+
+        li {
+            margin: .1vw;
+            a {
+                font-size: 16px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@include breakpoint(mobile) {
+
+    nav {
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 30px;
+        .logo {
+            height: 35px;
+        }
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        top: 4rem;
+        height: 40vh;
+        padding: 0;
+        border-radius: 0;
+        li {
+            margin: 10px 0;
+        }
+    }
+    
+    .nav-menu.active {
+        left: 0;
+        width: 100%
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar-box {
+        position: relative;
+        margin-top: 0;
+        height: 8vh;
+    }
+}

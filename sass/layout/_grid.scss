@@ -1,0 +1,71 @@
+@mixin container {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container {
+    @include container;
+    padding: 0 30%;
+}
+
+.container-md {
+    @include container;
+    padding: 0 20%;
+}
+
+.container-xl {
+    @include container;
+    padding: 0 14%;
+}
+
+.container-xlm {
+    @include container;
+    width: 84.5%;
+    margin: 0 auto;
+}
+
+.container-xxl {
+    @include container;
+    padding: 0 10%;
+}
+
+.container-xxxl {
+    @include container;
+    padding: 0 5%;
+}
+
+@include breakpoint(desktop) {
+    .container {
+        padding: 0 20%;
+    }
+    .container-md {
+        padding: 0 13%;
+    }
+
+    .container-xl {
+        padding: 0 7%;
+    }
+
+    .container-xlm {
+        @include container;
+        width: 89.5%;
+        margin: 0 auto;
+    }
+    .container-xxl {
+        @include container;
+        padding: 0 5%;
+    }
+
+}
+
+@include breakpoint(mobile) {
+    .container,
+    .container-md,
+    .container-xl,
+    .container-xlm,
+    .container-xxl,
+    .container-xxxl {
+        padding: 0 5%;
+    }
+}

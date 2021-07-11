@@ -1,0 +1,413 @@
+.text-title {
+    font-size: 27px;
+    line-height: normal;
+    color: $grey;
+    font-weight: 700;
+}
+
+.text-black {
+    color: #000;
+    font-size: 26px;
+    line-height: normal;
+    font-weight: 700;
+}
+
+.text-md {
+    font-size: 27px;
+    line-height: normal;
+    color: $grey;
+    font-weight: 700;
+    position: relative;
+}
+
+.yellow-background,
+.blue-background {
+    background-color: $yellow;
+    border-radius: 20px;
+    padding: 1px 17px;
+    color: white;
+}
+
+.blue-background {
+    background-color: $blue-max-light;
+}
+
+.under-line::after {
+    content: '';
+    width: 80px;
+    position: absolute;
+    margin-left: -5.5%;
+    bottom: 1px;
+    border: 11px solid $yellow;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.tech-rules {
+    height: auto;
+    width: 100%;
+    article {
+        display: flex;
+        width: 100%;
+        .left-rules {
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            padding: 50px 0 0 40px;
+        }
+        .right-rules {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            width: 50%;
+            align-items: flex-end;
+            margin-top: 200px;
+            p {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.how-many,
+.absorb {
+    h1 {
+        margin: 4% 0;
+    }
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    .one-year {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        height: auto;
+        margin-top: -2%;
+        figure {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            height: 100%;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+            p {
+                display: flex;
+                font-size: 32px;
+                font-weight: 800;
+                height: 220px;
+                text-align: center;
+            }
+        }
+        .equals {
+            width: 1%;
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 20%;
+        }
+    }
+}
+
+.pro-ecology {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom-right-radius: 20%;
+    border-top-right-radius: 20%;
+    .text-center {
+        text-align: end;
+    }
+    article {
+        width: 90%;
+        display: flex;
+        height: auto;
+        img {
+            width: 100%;
+            height: 50%;
+        }
+        h3 {
+            font-size: 25px;
+        }
+    }
+}
+
+.actualy {
+    height: auto;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 300px;
+    img {
+        cursor: pointer;
+    }
+    .text-center {
+        text-align: start;
+        padding-left: 10%;
+        font-weight: 800;
+        text-transform: capitalize;
+        letter-spacing: .5px;
+    }
+    .three-cards {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        cursor: pointer;
+        article {
+            height: auto;
+            width: 30%;
+            position: relative;
+            box-shadow: 0px 3px 6px #00000029;
+            h1 {
+                position: absolute;
+                top: 25%;
+                width: 40%;
+                left: 30%;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        article:hover {
+            transform: translateY(-3px);
+            box-shadow: 1px 4px 7px #00000029;
+            transition-duration: .3s;
+        }
+    }
+    #open-card-one,
+    #open-card-two,
+    #open-card-three {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 3;
+        padding: 15% 10%;
+        article {
+            height: auto;
+            min-height: 40%;
+            width: 80%;
+            background: #fff;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                z-index: 5;
+            }
+            .text-card,
+            .text-card-bolder {
+                width: 70%;
+                font-size: min(21px, 2.8vw);
+                line-height: normal;
+                color: $grey;
+                font-weight: 700;
+                position: relative;
+                z-index: 3;
+            }
+            .text-card-bolder {
+                font-size: min(21px, 2.8vw);
+                font-size: 800;
+            }
+            h1 {
+                width: 70%;
+            }
+            .yellow-background {
+                font-weight: 700;
+                color: $grey;
+            }
+        }
+    }
+    #card-one {
+        .yellow-background {
+            color: $grey;
+        }
+        .text-md {
+            color: rgb(88, 88, 88);
+            position: absolute;
+            top: 10px;
+            width: 65%;
+            left: 20%;
+            line-height: 40px;
+        }
+    }
+    #card-two {
+        .text-md {
+            width: 20%;
+            color: rgb(75, 75, 75);
+            position: absolute;
+            left: 53%;
+            top: 20%;
+        }
+    }
+    #card-three {
+        .yellow-background {
+            color: $grey;
+        }
+        .text-md {
+            width: 80%;
+            color: rgb(75, 75, 75);
+            position: absolute;
+            left: 14%;
+            top: 5%;
+        }
+    }
+    #open-card-one {
+        display: none;
+        article {
+            .card-photo {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: 0;
+                opacity: .5;
+            }
+        }
+    }
+    #open-card-two {
+        display: none;
+        article {
+            .card-photo {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: 0;
+                opacity: 1;
+                height: 110%;
+            }
+        }
+    }
+    #open-card-three {
+        display: none;
+        article {
+            .card-photo {
+                position: absolute;
+                right: 20%;
+                bottom: 0;
+                z-index: 0;
+                opacity: .3;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@include breakpoint(desktop) {
+    .text-md {
+        font-size: 23px;
+    }
+}
+
+@include breakpoint(mobile) {
+    .text-title {
+        font-size: 15px;
+    }
+    .text-black {
+        font-size: 14px;
+    }
+    .text-md {
+        font-size: 27px;
+    }
+    .under-line::after {
+        width: 5%;
+        bottom: -10%;
+        border: 6px solid $yellow;
+    }
+    // #open-card-one,
+    // #open-card-two,
+    // #open-card-three {
+    //     padding: 5% 8%;
+    //     article {
+    //         height: auto;
+    //         width: 90%;
+    //         .close {
+    //             position: absolute;
+    //             top: 20px;
+    //             right: 20px;
+    //         }
+    //         .text-card,
+    //         .text-card-bolder {
+    //             width: 70%;
+    //             font-size: 9px;
+    //             line-height: normal;
+    //             color: $grey;
+    //             font-weight: 700;
+    //             position: relative;
+    //             z-index: 3;
+    //         }
+    //         .text-card-bolder {
+    //             font-size: 9px;
+    //             font-size: 800;
+    //         }
+    //     }
+    // }
+    .tech-rules {
+        article {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            .left-rules {
+                width: 90%;
+                flex-direction: column;
+                padding: 30px 0 0 10px;
+            }
+            .right-rules {
+                width: 100%;
+                margin-top: 30px;
+                img {
+                    width: 100%;
+                }
+                p {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    .how-many,
+    .absorb {
+        .one-year {
+            figure {
+                img {
+                    width: 140%;
+                }
+                p {
+                    font-size: 2.5vw;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .equals {
+                font-size: 2.5vw;
+            }
+        }
+    }
+    .pro-ecology {
+        article {
+            flex-direction: column;
+        }
+    }
+    .actualy {
+        .three-cards {
+            flex-direction: column;
+            article {
+                margin: 20px 0;
+                width: 100%;
+                max-height: 400px;
+                height: 400px;
+                img {
+                    width: 380px;
+                }
+            }
+        }
+    }
+}

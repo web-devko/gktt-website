@@ -1,0 +1,66 @@
+.selWrap {
+    border: 3px solid $dirty-cream;
+    width: 400px;
+    border-radius: 3px;
+    margin: auto;
+    position: absolute;
+    z-index: 5;
+}
+
+.u-hide {
+    display: none;
+}
+
+.s-dropdown--styled {
+    border-radius: 3px;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    background: rgb(255, 255, 255);
+    span {
+        color: $dirty-cream;
+        padding-left: 13px;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        font-size: 18px;
+        line-height: normal;
+        font-weight: 700;
+        &::before {
+            position: absolute;
+            right: 10px;
+        }
+    }
+    ul {
+        box-sizing: border-box;
+        list-style-type: none;
+        padding-top: 10px;
+        padding-left: 0px;
+        li {
+            box-sizing: border-box;
+            padding: 10px 13px 10px 53px;
+            position: relative;
+            line-height: 20px;
+            cursor: pointer;
+            color: #000;
+            font-size: 18px;
+            line-height: normal;
+            font-weight: 700;
+            &.selected {
+                background-color: snow;
+            }
+            &:hover {
+                background-color: snow;
+            }
+        }
+    }
+}
+
+@include breakpoint(mobile) {
+    .selWrap {
+        width: 70%;
+        left: 15%;
+    }
+}
